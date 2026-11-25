@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIG GANG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="transition-screen">
+    <div class="transition-logo">BIG GANG</div>
+</div>
+
+
+   <header class="header">
+    <a href="#" class="logo">BIG GANG<span>®</span></a>
+
+    <nav class="navigation">
+    <a href="#catalog">КАТАЛОГ</a>
+
+    <a href="cart.html">
+    КОРЗИНА
+    <span class="cart-count" id="cart-count">0</span>
+</a>
+</nav>
+
+    <div class="header-label">STREETWEAR / 2026</div>
+</header>
+
+
+<main class="hero">
+
+    
+<div class="hero-content">
+    <p class="subtitle">PRE-OWNED STREETWEAR</p>
+
+    <h1>BIG GANG</h1>
+
+    <p class="description">
+        ТВОЙ СТИЛЬ. ТВОИ ПРАВИЛА.
+    </p>
+
+    <div class="hero-line"></div>
+
+    <p class="hero-text">
+        НЕ ПРОСТО ОДЕЖДА.
+        <span>ЭТО ТВОЯ ИНДИВИДУАЛЬНОСТЬ.</span>
+    </p>
+
+    <button class="catalog-button">
+        СМОТРЕТЬ КАТАЛОГ
+        <span>→</span>
+    </button>
+
+    <p class="hero-bottom">BIG GANG® — EST. 2026</p>
+</div>
+
+</main>
+
+
+<section id="catalog">
+    <div class="catalog-heading">
+        <p class="section-subtitle">FIND YOUR STYLE</p>
+        <h2>КАТАЛОГ</h2>
+        <p class="section-description">
+            ВЫБИРАЙ СВОЙ СТИЛЬ. СОЗДАВАЙ СВОИ ПРАВИЛА.
+        </p>
+    </div>
+
+    <div class="catalog-grid" id="products-list">
+
+</div>
+
+</section>
+
+
+
+<section id="cart">
+    <div class="cart-heading">
+        <p class="section-subtitle">YOUR SELECTION</p>
+        <h2>КОРЗИНА</h2>
+    </div>
+
+    <div id="cart-items" class="cart-items">
+        <p class="cart-empty">КОРЗИНА ПОКА ПУСТА</p>
+    </div>
+
+    <div class="cart-summary">
+        <p>ИТОГО: <span id="cart-total">0 ₽</span></p>
+
+        <button id="checkout-button" class="checkout-button" disabled>
+            ОФОРМИТЬ ЗАКАЗ
+        </button>
+    </div>
+</section>
+
+
+<!-- ОКНО ПОДРОБНОЙ КАРТОЧКИ ТОВАРА -->
+
+<div class="product-modal" id="product-modal" hidden>
+    <div class="product-modal-overlay" data-close-modal></div>
+
+    <div class="product-modal-content">
+        <button class="modal-close" data-close-modal>×</button>
+
+        <div class="modal-image-wrap">
+            <img id="modal-image" src="" alt="Фото товара">
+        </div>
+
+        <div class="modal-details">
+            <p id="modal-category" class="product-category"></p>
+
+            <h2 id="modal-title"></h2>
+
+            <p id="modal-price" class="modal-price"></p>
+
+            <p class="size-heading">ВЫБЕРИТЕ РАЗМЕР</p>
+
+            <div class="size-options" id="size-options">
+                <button type="button" data-size="XS">XS</button>
+                <button type="button" data-size="S">S</button>
+                <button type="button" data-size="M">M</button>
+                <button type="button" data-size="L">L</button>
+                <button type="button" data-size="XL">XL</button>
+            </div>
+
+            <button id="add-to-cart-button" class="add-to-cart-button">
+                ДОБАВИТЬ В КОРЗИНУ
+            </button>
+
+            <p id="modal-message" class="modal-message"></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- ОКНО ОФОРМЛЕНИЯ ЗАКАЗА -->
+
+<div class="checkout-modal" id="checkout-modal" hidden>
+    <div class="checkout-overlay" data-close-checkout></div>
+
+    <div class="checkout-content">
+        <button class="checkout-close" data-close-checkout>×</button>
+
+        <div id="checkout-form-wrapper">
+            <p class="section-subtitle">BIG GANG / CHECKOUT</p>
+            <h2>ОФОРМЛЕНИЕ ЗАКАЗА</h2>
+
+            <form id="checkout-form">
+                <label for="customer-name">ВАШЕ ИМЯ</label>
+                <input
+                    type="text"
+                    id="customer-name"
+                    placeholder="Введите имя"
+                    required
+                >
+
+                <label for="customer-phone">НОМЕР ТЕЛЕФОНА</label>
+                <input
+                    type="tel"
+                    id="customer-phone"
+                    placeholder="+7 (999) 123-45-67"
+                    required
+                >
+
+                <label for="customer-address">АДРЕС ДОСТАВКИ</label>
+                <input
+                    type="text"
+                    id="customer-address"
+                    placeholder="Город, улица, дом"
+                    required
+                >
+
+                <button type="submit" class="checkout-submit">
+                    ПОДТВЕРДИТЬ ЗАКАЗ
+                </button>
+            </form>
+        </div>
+
+        <div id="checkout-success" hidden>
+            <p class="success-mark">✓</p>
+            <h2>ЗАКАЗ СОЗДАН</h2>
+            <p>СПАСИБО ЗА ПОКУПКУ!</p>
+            <p id="success-order-number"></p>
+
+            <button type="button" id="finish-order" class="checkout-submit">
+                ВЕРНУТЬСЯ В МАГАЗИН
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
