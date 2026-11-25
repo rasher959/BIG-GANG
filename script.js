@@ -85,6 +85,24 @@ if (catalogButton && catalogSection) {
 }
 
 
+const catalogButton = document.querySelector(".catalog-button");
+const catalogSection = document.querySelector("#catalog");
+
+if (catalogButton && catalogSection) {
+    catalogButton.addEventListener("click", () => {
+        showTransition();
+
+        setTimeout(() => {
+            catalogSection.scrollIntoView({
+                behavior: "smooth"
+            });
+
+            setTimeout(() => {
+                hideTransition();
+            }, 500);
+        }, 1500);
+    });
+}
 
 // КАТАЛОГ ТОВАРОВ
 
